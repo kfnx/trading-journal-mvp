@@ -91,7 +91,7 @@ export default function ImportPage() {
               <p className="mt-2 text-xs text-neutral-400">
                 Don't have a file yet?{' '}
                 <a
-                  href="/sample-trades-april.csv"
+                  href="/sample-trades.csv"
                   download
                   className="font-medium text-primary-600 underline underline-offset-2 hover:text-primary-700"
                 >
