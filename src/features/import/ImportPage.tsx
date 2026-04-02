@@ -88,6 +88,17 @@ export default function ImportPage() {
               <p className="mt-1 text-sm text-neutral-500">
                 Export your trades from your broker and upload the CSV. Any format is supported — you'll map the fields next.
               </p>
+              <p className="mt-2 text-xs text-neutral-400">
+                Don't have a file yet?{' '}
+                <a
+                  href="/sample-trades-april.csv"
+                  download
+                  className="font-medium text-primary-600 underline underline-offset-2 hover:text-primary-700"
+                >
+                  Download sample CSV
+                </a>
+                {' '}to try it out.
+              </p>
             </div>
             <CsvUploader onFileParsed={handleFile} loading={loading} />
           </div>
