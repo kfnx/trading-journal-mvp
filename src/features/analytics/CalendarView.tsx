@@ -20,10 +20,10 @@ export function CalendarView({ byDay }: Props) {
   const startOffset = getDay(monthStart) // 0=Sun
 
   return (
-    <div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
+    <div className="border border-neutral-800 bg-neutral-900 p-5">
       {/* Header */}
       <div className="mb-4 flex items-center justify-between">
-        <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+        <h3 className="font-mono text-xs uppercase tracking-widest text-neutral-400">
           {format(current, 'MMMM yyyy')}
         </h3>
         <div className="flex gap-1">
@@ -65,7 +65,7 @@ export function CalendarView({ byDay }: Props) {
               key={key}
               title={summary ? `PnL: ${summary.totalPnl >= 0 ? '+' : ''}${summary.totalPnl.toFixed(2)} (${summary.tradeCount} trades)` : undefined}
               className={cn(
-                'relative flex flex-col items-center justify-center rounded-lg p-1.5 text-center aspect-square text-xs transition-colors',
+                'relative flex flex-col items-center justify-center p-1.5 text-center aspect-square text-xs transition-colors',
                 summary
                   ? summary.totalPnl > 0
                     ? 'bg-success-100 text-success-800 dark:bg-success-900 dark:text-success-200 cursor-pointer hover:bg-success-200'
@@ -94,7 +94,7 @@ export function CalendarView({ byDay }: Props) {
           <span className="size-2.5 rounded bg-error-200 dark:bg-error-900" /> Loss
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="size-2.5 rounded bg-neutral-200 dark:bg-neutral-700" /> No trades
+          <span className="size-2.5 rounded bg-neutral-700" /> No trades
         </span>
       </div>
     </div>

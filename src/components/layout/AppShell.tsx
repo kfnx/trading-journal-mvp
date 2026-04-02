@@ -15,7 +15,7 @@ export function AppShell() {
   const title = TITLES[pathname] ?? TITLES[Object.keys(TITLES).find(k => pathname.startsWith(k)) ?? ''] ?? ''
 
   return (
-    <div className="flex h-screen overflow-hidden bg-neutral-50 dark:bg-neutral-950">
+    <div className="flex h-screen overflow-hidden bg-neutral-950">
       <Sidebar />
       <div className="flex flex-1 flex-col overflow-hidden">
         <TopBar title={title} />

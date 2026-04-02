@@ -22,10 +22,10 @@ export function CsvUploader({ onFileParsed, loading }: Props) {
   return (
     <div
       className={cn(
-        'relative flex flex-col items-center justify-center gap-4 rounded-xl border-2 border-dashed p-10 transition-colors cursor-pointer',
+        'relative flex flex-col items-center justify-center gap-4 border-2 border-dashed p-10 transition-colors cursor-pointer',
         dragging
-          ? 'border-primary-400 bg-primary-50 dark:bg-primary-950'
-          : 'border-neutral-200 bg-neutral-50 hover:border-neutral-300 dark:border-neutral-700 dark:bg-neutral-900'
+          ? 'border-primary-500 bg-primary-950'
+          : 'border-neutral-700 bg-neutral-900 hover:border-neutral-600'
       )}
       onClick={() => inputRef.current?.click()}
       onDragOver={(e) => { e.preventDefault(); setDragging(true) }}
@@ -47,24 +47,18 @@ export function CsvUploader({ onFileParsed, loading }: Props) {
 
       {fileName ? (
         <>
-          <div className="flex size-12 items-center justify-center rounded-xl bg-primary-100 dark:bg-primary-900">
-            <RiFileLine className="size-6 text-primary-600" />
-          </div>
+          <RiFileLine className="size-8 text-primary-500" />
           <div className="text-center">
-            <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">{fileName}</p>
-            <p className="mt-1 text-xs text-neutral-400">Click to change file</p>
+            <p className="font-mono text-sm text-neutral-100">{fileName}</p>
+            <p className="mt-1 font-mono text-[10px] uppercase tracking-wide text-neutral-500">Click to change file</p>
           </div>
         </>
       ) : (
         <>
-          <div className="flex size-12 items-center justify-center rounded-xl bg-neutral-100 dark:bg-neutral-800">
-            <RiUploadCloud2Line className="size-6 text-neutral-500" />
-          </div>
+          <RiUploadCloud2Line className="size-8 text-neutral-600" />
           <div className="text-center">
-            <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-              Drop your CSV file here
-            </p>
-            <p className="mt-1 text-xs text-neutral-400">or click to browse</p>
+            <p className="font-mono text-sm text-neutral-300">Drop your CSV here</p>
+            <p className="mt-1 font-mono text-[10px] uppercase tracking-wide text-neutral-600">or click to browse</p>
           </div>
           <Button variant="stroke" size="sm" type="button" disabled={loading}>
             Choose file

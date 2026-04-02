@@ -9,8 +9,8 @@ export function MessageBubble({ message }: { message: ChatMessage }) {
     <div className={cn('flex items-start gap-3', isUser && 'flex-row-reverse')}>
       {/* Avatar */}
       <div className={cn(
-        'flex size-7 shrink-0 items-center justify-center rounded-full text-white',
-        isUser ? 'bg-primary-600' : 'bg-neutral-700 dark:bg-neutral-600'
+        'flex size-7 shrink-0 items-center justify-center rounded text-neutral-950',
+        isUser ? 'bg-primary-500' : 'bg-neutral-800 text-neutral-300'
       )}>
         {isUser
           ? <RiUserLine className="size-3.5" />
@@ -20,10 +20,10 @@ export function MessageBubble({ message }: { message: ChatMessage }) {
 
       {/* Bubble */}
       <div className={cn(
-        'max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed whitespace-pre-wrap',
+        'max-w-[80%] rounded px-4 py-2.5 text-sm leading-relaxed whitespace-pre-wrap',
         isUser
-          ? 'bg-primary-600 text-white rounded-tr-sm'
-          : 'bg-neutral-100 text-neutral-900 dark:bg-neutral-800 dark:text-neutral-100 rounded-tl-sm'
+          ? 'bg-primary-500 text-neutral-950 font-medium'
+          : 'bg-neutral-800 text-neutral-100'
       )}>
         {message.content}
       </div>
@@ -34,15 +34,15 @@ export function MessageBubble({ message }: { message: ChatMessage }) {
 export function TypingIndicator() {
   return (
     <div className="flex items-start gap-3">
-      <div className="flex size-7 shrink-0 items-center justify-center rounded-full bg-neutral-700 dark:bg-neutral-600 text-white">
+      <div className="flex size-7 shrink-0 items-center justify-center rounded bg-neutral-800 text-neutral-300">
         <RiRobot2Line className="size-3.5" />
       </div>
-      <div className="rounded-2xl rounded-tl-sm bg-neutral-100 px-4 py-3 dark:bg-neutral-800">
+      <div className="rounded bg-neutral-800 px-4 py-3">
         <div className="flex items-center gap-1">
           {[0, 1, 2].map((i) => (
             <span
               key={i}
-              className="size-1.5 rounded-full bg-neutral-400 animate-bounce"
+              className="size-1.5 rounded-full bg-neutral-500 animate-bounce"
               style={{ animationDelay: `${i * 150}ms` }}
             />
           ))}

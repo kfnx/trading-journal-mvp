@@ -4,9 +4,9 @@ import type { Trade } from '@/types/trade'
 
 function Row({ label, value, className }: { label: string; value: React.ReactNode; className?: string }) {
   return (
-    <div className="flex items-center justify-between py-2.5 border-b border-neutral-100 dark:border-neutral-800 last:border-0">
-      <span className="text-xs font-medium text-neutral-400 uppercase tracking-wide">{label}</span>
-      <span className={`text-sm font-semibold text-neutral-900 dark:text-neutral-100 ${className ?? ''}`}>{value}</span>
+    <div className="flex items-center justify-between border-b border-neutral-800 py-2.5 last:border-0">
+      <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">{label}</span>
+      <span className={`font-mono text-sm text-neutral-100 ${className ?? ''}`}>{value}</span>
     </div>
   )
 }
@@ -22,18 +22,18 @@ export function TradeMetaCard({ trade }: { trade: Trade }) {
   })()
 
   return (
-    <div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
+    <div className="rounded border border-neutral-800 bg-neutral-900 p-5">
       <div className="mb-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <h2 className="text-lg font-bold text-neutral-900 dark:text-neutral-100">{trade.symbol}</h2>
           <Badge variant={trade.side === 'LONG' ? 'success' : 'error'}>{trade.side}</Badge>
         </div>
-        <span className={`text-xl font-bold ${pnlColor}`}>
+        <span className={`font-mono text-xl font-medium ${pnlColor}`}>
           {trade.pnl >= 0 ? '+' : ''}{trade.pnl.toFixed(2)}
         </span>
       </div>
 
-      <div className="divide-y divide-neutral-100 dark:divide-neutral-800">
+      <div className="divide-y divide-neutral-800">
         <Row label="Entry date" value={`${trade.entryDate}${trade.entryTime ? ' ' + trade.entryTime : ''}`} />
         <Row label="Exit date"  value={`${trade.exitDate}${trade.exitTime ? ' ' + trade.exitTime : ''}`} />
         <Row label="Entry price" value={trade.entryPrice.toFixed(4)} />

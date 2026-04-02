@@ -8,8 +8,8 @@ interface Props {
 export function MonthlyOverview({ months }: Props) {
   if (months.length === 0) {
     return (
-      <div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-        <p className="text-sm text-neutral-400">No monthly data yet.</p>
+      <div className="border border-neutral-800 bg-neutral-900 p-5">
+        <p className="font-mono text-xs text-neutral-500">No monthly data yet.</p>
       </div>
     )
   }
@@ -18,23 +18,23 @@ export function MonthlyOverview({ months }: Props) {
   const recent = months.slice(-12)
 
   return (
-    <div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-      <h3 className="mb-4 text-sm font-semibold text-neutral-900 dark:text-neutral-100">Monthly PnL</h3>
+    <div className="border border-neutral-800 bg-neutral-900 p-5">
+      <h3 className="mb-4 font-mono text-[10px] uppercase tracking-widest text-neutral-500">Monthly PnL</h3>
       <div className="flex items-end gap-2 overflow-x-auto pb-1">
         {recent.map((m) => {
           const pct = Math.abs(m.totalPnl) / maxAbsPnl
           const height = Math.max(pct * 120, 4)
           const positive = m.totalPnl >= 0
           return (
-            <div key={m.month} className="flex flex-col items-center gap-1 shrink-0" title={`${m.label}: ${m.totalPnl >= 0 ? '+' : ''}${m.totalPnl.toFixed(2)}`}>
-              <span className={cn('text-[10px] font-semibold', positive ? 'text-success-600' : 'text-error-600')}>
+            <div key={m.month} className="flex shrink-0 flex-col items-center gap-1" title={`${m.label}: ${m.totalPnl >= 0 ? '+' : ''}${m.totalPnl.toFixed(2)}`}>
+              <span className={cn('font-mono text-[9px] font-medium', positive ? 'text-success-500' : 'text-error-500')}>
                 {m.totalPnl >= 0 ? '+' : ''}{m.totalPnl.toFixed(0)}
               </span>
               <div
-                className={cn('w-8 rounded-t-md transition-all', positive ? 'bg-success-400 dark:bg-success-600' : 'bg-error-400 dark:bg-error-600')}
+                className={cn('w-8 transition-all', positive ? 'bg-success-700' : 'bg-error-800')}
                 style={{ height }}
               />
-              <span className="text-[9px] text-neutral-400 text-center leading-tight">
+              <span className="text-center font-mono text-[8px] leading-tight text-neutral-600">
                 {m.label.split(' ')[0]}<br />{m.label.split(' ')[1]}
               </span>
             </div>

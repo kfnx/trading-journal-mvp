@@ -36,7 +36,7 @@ export default function TradeDetailPage() {
         <TradeMetaCard trade={trade} />
         <div className="flex flex-col gap-5">
           <TradeChart trade={trade} />
-          <div className="rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900">
+          <div className="border border-neutral-800 bg-neutral-900 p-4">
             <Label htmlFor="notes" className="mb-2 block">Notes</Label>
             <Textarea
               id="notes"

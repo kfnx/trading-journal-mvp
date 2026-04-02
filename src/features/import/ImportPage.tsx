@@ -67,20 +67,20 @@ export default function ImportPage() {
           <div key={s} className="flex items-center gap-3">
             <div className="flex items-center gap-2">
               <div className={`flex size-6 items-center justify-center rounded-full text-xs font-bold transition-colors
-                ${step === s ? 'bg-primary-600 text-white' : s < step ? 'bg-success-500 text-white' : 'bg-neutral-200 text-neutral-500 dark:bg-neutral-700'}`}>
+                ${step === s ? 'bg-primary-500 text-neutral-950' : s < step ? 'bg-success-500 text-neutral-950' : 'bg-neutral-800 text-neutral-500'}`}>
                 {STEP_LABELS[s] < STEP_LABELS[step] ? <RiCheckLine className="size-3.5" /> : i + 1}
               </div>
-              <span className={`text-sm font-medium ${step === s ? 'text-neutral-900 dark:text-neutral-100' : 'text-neutral-400'}`}>
+              <span className={`font-mono text-xs uppercase tracking-wide ${step === s ? 'text-neutral-100' : 'text-neutral-600'}`}>
                 {STEP_LABELS[s]}
               </span>
             </div>
-            {i < arr.length - 1 && <div className="h-px w-8 bg-neutral-200 dark:bg-neutral-700" />}
+            {i < arr.length - 1 && <div className="h-px w-8 bg-neutral-800" />}
           </div>
         ))}
       </div>
 
       {/* Step content */}
-      <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-xs dark:border-neutral-800 dark:bg-neutral-900">
+      <div className="border border-neutral-800 bg-neutral-900 p-6">
         {step === 'upload' && (
           <div className="flex flex-col gap-4">
             <div>

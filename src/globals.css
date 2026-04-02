@@ -1,69 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* AlignUI Design Tokens — Light */
+/* Terminal Design System */
 :root {
-  /* Primary (Blue) */
-  --color-primary-50:  #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
-  --color-primary-950: #172554;
+  /* Primary — terminal green */
+  --color-primary-50:  #001a0d;
+  --color-primary-100: #003320;
+  --color-primary-200: #004d2f;
+  --color-primary-300: #007a4c;
+  --color-primary-400: #00a866;
+  --color-primary-500: #00d992;
+  --color-primary-600: #00d992;
+  --color-primary-700: #00b87c;
+  --color-primary-800: #008f5f;
+  --color-primary-900: #005c3c;
+  --color-primary-950: #000f06;
 
-  /* Neutral (Slate) */
-  --color-neutral-50:  #f8fafc;
-  --color-neutral-100: #f1f5f9;
-  --color-neutral-200: #e2e8f0;
-  --color-neutral-300: #cbd5e1;
-  --color-neutral-400: #94a3b8;
-  --color-neutral-500: #64748b;
-  --color-neutral-600: #475569;
-  --color-neutral-700: #334155;
-  --color-neutral-800: #1e293b;
-  --color-neutral-900: #0f172a;
-  --color-neutral-950: #020617;
+  /* Neutral — cool dark slate */
+  --color-neutral-50:  #f0f0f8;
+  --color-neutral-100: #d8d8ec;
+  --color-neutral-200: #b0b0cc;
+  --color-neutral-300: #8888aa;
+  --color-neutral-400: #606088;
+  --color-neutral-500: #484870;
+  --color-neutral-600: #30304e;
+  --color-neutral-700: #1e1e36;
+  --color-neutral-800: #141428;
+  --color-neutral-900: #0c0c1e;
+  --color-neutral-950: #05050f;
 
-  /* Success (Green) */
-  --color-success-50:  #f0fdf4;
-  --color-success-100: #dcfce7;
-  --color-success-200: #bbf7d0;
-  --color-success-300: #86efac;
-  --color-success-400: #4ade80;
-  --color-success-500: #22c55e;
-  --color-success-600: #16a34a;
-  --color-success-700: #15803d;
-  --color-success-800: #166534;
-  --color-success-900: #14532d;
-  --color-success-950: #052e16;
+  /* Success — terminal green */
+  --color-success-50:  #001a0d;
+  --color-success-100: #003320;
+  --color-success-200: #004d2f;
+  --color-success-300: #007a4c;
+  --color-success-400: #00a866;
+  --color-success-500: #00d992;
+  --color-success-600: #00d992;
+  --color-success-700: #00b87c;
+  --color-success-800: #008f5f;
+  --color-success-900: #005c3c;
+  --color-success-950: #000f06;
 
-  /* Error (Red) */
-  --color-error-50:  #fef2f2;
-  --color-error-100: #fee2e2;
-  --color-error-200: #fecaca;
-  --color-error-300: #fca5a5;
-  --color-error-400: #f87171;
-  --color-error-500: #ef4444;
-  --color-error-600: #dc2626;
-  --color-error-700: #b91c1c;
-  --color-error-800: #991b1b;
-  --color-error-900: #7f1d1d;
-  --color-error-950: #450a0a;
+  /* Error — hot red */
+  --color-error-50:  #1a0009;
+  --color-error-100: #330011;
+  --color-error-200: #66001e;
+  --color-error-300: #99002e;
+  --color-error-400: #cc003d;
+  --color-error-500: #ff4655;
+  --color-error-600: #ff4655;
+  --color-error-700: #cc3844;
+  --color-error-800: #992a33;
+  --color-error-900: #661c22;
+  --color-error-950: #1a0009;
 
   /* Warning */
-  --color-warning-50:  #fffbeb;
+  --color-warning-50:  #1a1000;
   --color-warning-500: #f59e0b;
   --color-warning-600: #d97706;
 
-  /* Semantic surfaces */
+  /* Light semantic (fallback) */
   --bg-primary:   #ffffff;
   --bg-secondary: #f8fafc;
   --bg-tertiary:  #f1f5f9;
@@ -73,15 +73,15 @@
   --text-tertiary:  #94a3b8;
 }
 
-/* AlignUI Design Tokens — Dark */
+/* Terminal dark */
 .dark {
-  --bg-primary:   #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-tertiary:  #334155;
-  --border-color: #334155;
-  --text-primary:   #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-tertiary:  #475569;
+  --bg-primary:   #08080e;
+  --bg-secondary: #06060d;
+  --bg-tertiary:  #0c0c1a;
+  --border-color: #18182c;
+  --text-primary:   #e0e0f0;
+  --text-secondary: #5858a0;
+  --text-tertiary:  #2a2a50;
 }
 
 * {
@@ -90,24 +90,21 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
   background-color: var(--bg-secondary);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
 }
 
-/* Scrollbar styling */
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-neutral-300);
-  border-radius: 3px;
-}
-.dark ::-webkit-scrollbar-thumb {
   background-color: var(--color-neutral-700);
+  border-radius: 2px;
 }

@@ -31,21 +31,19 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-neutral-50 px-4 dark:bg-neutral-950">
+    <div className="flex min-h-screen items-center justify-center bg-neutral-950 px-4">
       <div className="w-full max-w-sm">
         {/* Card */}
-        <div className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
+        <div className="border border-neutral-800 bg-neutral-900 p-8">
           {/* Logo */}
           <div className="mb-8 flex flex-col items-center gap-3">
-            <div className="flex size-12 items-center justify-center rounded-xl bg-primary-600 shadow-md">
-              <RiCandleLine className="size-6 text-white" />
-            </div>
+            <RiCandleLine className="size-8 text-primary-500" />
             <div className="text-center">
-              <h1 className="text-xl font-bold text-neutral-900 dark:text-neutral-100">
+              <h1 className="font-mono text-base uppercase tracking-widest text-neutral-100">
                 Trading Journal
               </h1>
-              <p className="mt-1 text-sm text-neutral-500">
-                Sign in to your account
+              <p className="mt-1 font-mono text-xs text-neutral-500">
+                sign in to continue
               </p>
             </div>
           </div>
@@ -107,9 +105,9 @@ export default function LoginPage() {
             </Button>
           </form>
 
-          <p className="mt-5 text-center text-xs text-neutral-400">
-            Demo credentials: <span className="font-medium">trader</span> /{" "}
-            <span className="font-medium">journal2026</span>
+          <p className="mt-5 text-center font-mono text-[10px] text-neutral-600">
+            demo: <span className="text-neutral-400">trader</span> /{" "}
+            <span className="text-neutral-400">journal2026</span>
           </p>
         </div>
       </div>

@@ -3,13 +3,13 @@ import { tv, type VariantProps } from '@/utils/tv'
 import { cn } from '@/utils/cn'
 
 const badgeStyles = tv({
-  base: 'inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium',
+  base: 'inline-flex items-center gap-1 rounded px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-wide font-medium',
   variants: {
     variant: {
-      neutral: 'bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300',
-      primary: 'bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300',
-      success: 'bg-success-100 text-success-700 dark:bg-success-900 dark:text-success-300',
-      error:   'bg-error-100 text-error-700 dark:bg-error-900 dark:text-error-300',
+      neutral: 'bg-neutral-800 text-neutral-300',
+      primary: 'bg-primary-900 text-primary-400',
+      success: 'bg-success-900 text-success-500',
+      error:   'bg-error-900 text-error-500',
       warning: 'bg-warning-50 text-warning-600',
     },
   },

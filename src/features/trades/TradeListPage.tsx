@@ -30,9 +30,9 @@ export default function TradeListPage() {
       {/* Summary bar */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="text-sm text-neutral-500">{filtered.length} trades</span>
-          <span className={`text-sm font-semibold ${totalPnl >= 0 ? 'text-success-600' : 'text-error-600'}`}>
-            Total PnL: {totalPnl >= 0 ? '+' : ''}{totalPnl.toFixed(2)}
+          <span className="font-mono text-xs text-neutral-500">{filtered.length} trades</span>
+          <span className={`font-mono text-sm font-medium ${totalPnl >= 0 ? 'text-success-500' : 'text-error-500'}`}>
+            {totalPnl >= 0 ? '+' : ''}{totalPnl.toFixed(2)}
           </span>
         </div>
       </div>

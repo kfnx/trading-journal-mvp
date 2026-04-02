@@ -150,8 +150,8 @@ export function TradeChart({ trade }: Props) {
   }, [trade])
 
   return (
-    <div className="rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900">
-      <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-neutral-400">
+    <div className="border border-neutral-800 bg-neutral-900 p-4">
+      <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-neutral-500">
         Price Chart — {trade.symbol}
       </p>
       <div ref={containerRef} className="w-full" />

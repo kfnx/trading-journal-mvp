@@ -22,10 +22,10 @@ ToastViewport.displayName = ToastPrimitive.Viewport.displayName
 type ToastVariant = 'default' | 'success' | 'error' | 'warning'
 
 const toastVariantStyles: Record<ToastVariant, string> = {
-  default: 'border-neutral-200 bg-white dark:border-neutral-700 dark:bg-neutral-900',
-  success: 'border-success-200 bg-success-50 dark:border-success-800 dark:bg-success-950',
-  error:   'border-error-200 bg-error-50 dark:border-error-800 dark:bg-error-950',
-  warning: 'border-warning-50 bg-warning-50',
+  default: 'border-neutral-700 bg-neutral-900',
+  success: 'border-success-900 bg-neutral-900',
+  error:   'border-error-900 bg-neutral-900',
+  warning: 'border-warning-500 bg-neutral-900',
 }
 
 const ToastRoot = React.forwardRef<
@@ -35,7 +35,7 @@ const ToastRoot = React.forwardRef<
   <ToastPrimitive.Root
     ref={ref}
     className={cn(
-      'group pointer-events-auto relative flex w-full items-start gap-3 overflow-hidden rounded-xl border p-4 shadow-lg transition-all',
+      'group pointer-events-auto relative flex w-full items-start gap-3 overflow-hidden rounded border p-4 shadow-lg transition-all',
       'data-[state=open]:animate-in data-[state=closed]:animate-out',
       'data-[state=closed]:fade-out-80 data-[state=open]:fade-in-0',
       'data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-bottom-full',
@@ -70,7 +70,7 @@ const ToastTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ToastPrimitive.Title
     ref={ref}
-    className={cn('text-sm font-semibold text-neutral-900 dark:text-neutral-100', className)}
+    className={cn('font-mono text-xs font-medium uppercase tracking-wide text-neutral-100', className)}
     {...props}
   />
 ))

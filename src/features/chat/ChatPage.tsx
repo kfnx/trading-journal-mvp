@@ -45,7 +45,7 @@ export default function ChatPage() {
       {/* Top bar */}
       <div className="mb-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="text-xs text-neutral-400">Model: <span className="font-medium text-neutral-600 dark:text-neutral-300">{model}</span></span>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-600">{model}</span>
         </div>
         <div className="flex gap-2">
           <Button variant="ghost" size="sm" onClick={() => clearMessages()} title="Clear chat">
@@ -59,13 +59,13 @@ export default function ChatPage() {
 
       {/* API key warning */}
       {noApiKey && (
-        <div className="mb-4 rounded-lg border border-warning-50 bg-warning-50 px-4 py-3 text-sm text-warning-600">
+        <div className="mb-4 border border-warning-600 bg-neutral-900 px-4 py-3 font-mono text-xs text-warning-500">
           No API key set. <button className="font-semibold underline" onClick={() => setSettingsOpen(true)}>Add your OpenRouter key</button> to enable the AI chat.
         </div>
       )}
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900">
+      <div className="flex-1 overflow-y-auto border border-neutral-800 bg-neutral-900 p-4">
         {messages.length === 0 ? (
           <div className="flex h-full flex-col items-center justify-center gap-2 text-center">
             <p className="text-sm font-medium text-neutral-500">Ask me anything about your trades</p>

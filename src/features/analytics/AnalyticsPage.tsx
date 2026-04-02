@@ -29,27 +29,27 @@ export default function AnalyticsPage() {
       </div>
       {/* Extra stats */}
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <div className="rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900">
-          <p className="text-xs text-neutral-400">Wins / Losses</p>
-          <p className="mt-1 text-lg font-bold text-neutral-900 dark:text-neutral-100">
-            <span className="text-success-600">{stats.totalWins}</span>
-            <span className="text-neutral-300 mx-1">/</span>
-            <span className="text-error-600">{stats.totalLosses}</span>
+        <div className="border border-neutral-800 bg-neutral-900 p-4">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">Wins / Losses</p>
+          <p className="mt-1 font-mono text-lg font-medium">
+            <span className="text-success-500">{stats.totalWins}</span>
+            <span className="mx-1 text-neutral-700">/</span>
+            <span className="text-error-500">{stats.totalLosses}</span>
           </p>
         </div>
-        <div className="rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900">
-          <p className="text-xs text-neutral-400">Avg PnL / Trade</p>
-          <p className={`mt-1 text-lg font-bold ${stats.avgPnlPerTrade >= 0 ? 'text-success-600' : 'text-error-600'}`}>
+        <div className="border border-neutral-800 bg-neutral-900 p-4">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">Avg PnL / Trade</p>
+          <p className={`mt-1 font-mono text-lg font-medium ${stats.avgPnlPerTrade >= 0 ? 'text-success-500' : 'text-error-500'}`}>
             {stats.avgPnlPerTrade >= 0 ? '+' : ''}{stats.avgPnlPerTrade.toFixed(2)}
           </p>
         </div>
-        <div className="rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900">
-          <p className="text-xs text-neutral-400">Largest Win</p>
-          <p className="mt-1 text-lg font-bold text-success-600">+{stats.largestWin.toFixed(2)}</p>
+        <div className="border border-neutral-800 bg-neutral-900 p-4">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">Largest Win</p>
+          <p className="mt-1 font-mono text-lg font-medium text-success-500">+{stats.largestWin.toFixed(2)}</p>
         </div>
-        <div className="rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900">
-          <p className="text-xs text-neutral-400">Largest Loss</p>
-          <p className="mt-1 text-lg font-bold text-error-600">{stats.largestLoss.toFixed(2)}</p>
+        <div className="border border-neutral-800 bg-neutral-900 p-4">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">Largest Loss</p>
+          <p className="mt-1 font-mono text-lg font-medium text-error-500">{stats.largestLoss.toFixed(2)}</p>
         </div>
       </div>
     </div>

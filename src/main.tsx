@@ -5,9 +5,9 @@ import App from './App'
 import { Toaster } from '@/components/ui/toast'
 import './globals.css'
 
-// Restore dark mode preference
+// Terminal dark by default
 const savedTheme = localStorage.getItem('tj-theme')
-if (savedTheme === 'dark') {
+if (savedTheme !== 'light') {
   document.documentElement.classList.add('dark')
 }
 

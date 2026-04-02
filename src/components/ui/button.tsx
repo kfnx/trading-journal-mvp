@@ -4,21 +4,21 @@ import { tv, type VariantProps } from '@/utils/tv'
 import { cn } from '@/utils/cn'
 
 const buttonStyles = tv({
-  base: 'inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 select-none whitespace-nowrap',
+  base: 'inline-flex items-center justify-center gap-2 rounded font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-500 disabled:pointer-events-none disabled:opacity-40 select-none whitespace-nowrap',
   variants: {
     variant: {
       primary:
-        'bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800',
+        'bg-primary-500 text-neutral-950 hover:bg-primary-400 active:bg-primary-600 font-semibold',
       secondary:
-        'bg-neutral-100 text-neutral-900 hover:bg-neutral-200 active:bg-neutral-300 dark:bg-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-700',
+        'bg-neutral-800 text-neutral-100 hover:bg-neutral-700 active:bg-neutral-600',
       stroke:
-        'border border-neutral-200 bg-white text-neutral-700 hover:bg-neutral-50 active:bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-800',
+        'border border-neutral-700 bg-transparent text-neutral-300 hover:bg-neutral-800 hover:text-neutral-100 active:bg-neutral-700',
       ghost:
-        'text-neutral-700 hover:bg-neutral-100 active:bg-neutral-200 dark:text-neutral-300 dark:hover:bg-neutral-800',
+        'text-neutral-400 hover:bg-neutral-800 hover:text-neutral-100 active:bg-neutral-700',
       error:
-        'bg-error-600 text-white hover:bg-error-700 active:bg-error-800',
+        'bg-error-600 text-white hover:bg-error-500 active:bg-error-700',
       success:
-        'bg-success-600 text-white hover:bg-success-700 active:bg-success-800',
+        'bg-success-600 text-neutral-950 hover:bg-success-500 active:bg-success-700',
     },
     size: {
       xs: 'h-7 px-2.5 text-xs',

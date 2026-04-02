@@ -17,10 +17,10 @@ export default function DashboardPage() {
     <div className="flex flex-col gap-6">
       {/* Welcome */}
       <div>
-        <h2 className="text-xl font-bold text-neutral-900 dark:text-neutral-100">
+        <h2 className="font-mono text-lg font-medium text-neutral-100">
           Welcome back, {username ?? 'Trader'}
         </h2>
-        <p className="mt-1 text-sm text-neutral-400">
+        <p className="mt-1 font-mono text-xs text-neutral-500">
           {isEmpty ? 'Import your first CSV to get started.' : `${trades.length} trades tracked.`}
         </p>
       </div>
@@ -37,14 +37,12 @@ export default function DashboardPage() {
             <button
               key={to}
               onClick={() => navigate(to)}
-              className="flex flex-col gap-3 rounded-xl border border-neutral-200 bg-white p-5 text-left shadow-xs transition-shadow hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900"
+              className="flex flex-col gap-3 border border-neutral-800 bg-neutral-900 p-5 text-left transition-colors hover:border-neutral-700 hover:bg-neutral-800"
             >
-              <div className="flex size-10 items-center justify-center rounded-lg bg-primary-50 text-primary-600 dark:bg-primary-950 dark:text-primary-400">
-                <Icon className="size-5" />
-              </div>
+              <Icon className="size-5 text-primary-500" />
               <div>
-                <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">{label}</p>
-                <p className="mt-0.5 text-xs text-neutral-400">{desc}</p>
+                <p className="text-sm font-medium text-neutral-100">{label}</p>
+                <p className="mt-0.5 font-mono text-[10px] uppercase tracking-wide text-neutral-500">{desc}</p>
               </div>
             </button>
           ))}
